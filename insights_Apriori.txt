@@ -1,0 +1,39 @@
+1) INSIGHT 1
+[RelationRecord(
+items=frozenset({'butter', 'whole milk', 'processed cheese'}), 
+support=0.00020049455323130388, 
+ordered_statistics=[OrderedStatistic(
+items_base=frozenset(c{'butter', 'processed cheese'}), 
+items_add=frozenset({'whole milk'}), 
+confidence=1.0, 
+lift=6.332204824375794)]),
+
+We are considering the set of items {'butter', 'whole milk', 'processed cheese'}
+
+#items_add=frozenset({'whole milk'}
+ This implies that whole milk has high individual support in the dataset which leads to high confidence and lift
+
+Y={'whole milk'} 
+X={'butter', 'processed cheese'}
+
+support=0.00020049455323130388
+- likelihood of {'butter', 'whole milk', 'processed cheese'} [v low value]
+
+#IMPORTANT
+confidence=1.0
+- when a customer buys {'butter', 'processed cheese'}, then the likelihood of then buying {'whole milk'} is a 100%
+
+lift=6.332204824375794
+Milk is 6.33 TIMES more likely to be bought when butter & cheese are bought together, compared to an average customer
+
+
+
+
+2)RelationRecord(
+items=frozenset({'domestic eggs', 'whole milk', 'canned vegetables'}), 
+support=0.00020049455323130388, 
+ordered_statistics=[OrderedStatistic(
+items_base=frozenset({'domestic eggs', 'canned vegetables'}), 
+items_add=frozenset({'whole milk'}), 
+confidence=1.0, 
+lift=6.332204824375794)]),
